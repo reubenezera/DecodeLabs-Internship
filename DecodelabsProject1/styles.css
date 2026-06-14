@@ -1,0 +1,254 @@
+:root {
+/* font sizes */
+    --fs-300: 0.875rem;
+    --fs-400: clamp(1rem, 3vw, 1.125rem);
+    --fs-500: clamp(1.125rem, 3vw, 1.25rem);
+    --fs-600: clamp(1.25rem, 3vw, 1.5rem);
+    --fs-700: clamp(2.5rem, 3vw, 4rem);
+
+    font-family: "Ludica Console", monospace;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #79d5ea;
+    font-family: "Ludica Console", monospace;
+    color: #F2F0EA;
+    font-weight: 400;
+}
+
+body h3 {
+    font-size: 1.5rem;
+    font-weight: var(--fw-90);
+}
+
+body section {
+    padding: .5rem 1rem .5rem 1rem;
+}
+
+picture {
+    display: block;
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header.primary-header{
+    padding-block: 1rem;
+    display: grid;
+    grid-template-columns:
+        minmax(1rem, 1fr)
+        minmax(0, 30rem)
+        minmax(0, 60rem)
+        minmax(1rem, 1fr);
+    
+    button:hover {
+        color: #0b5491;
+    }
+}
+
+header.primary-header h1 {
+    background-color: #87CEFA;
+    padding: .65rem 1rem;    
+}
+
+header.primary-header button {
+background: none;
+border: none;
+padding: 1;
+font-size: 18px;
+font-weight: 900;
+font-family: "Ludica Console", monospace;
+color: #f2f0ea;
+}
+
+header.primary-header .logo {
+    font-size: 1.65rem;
+    grid-column: 2 / 3;
+}
+
+header.primary-header .nav-open {
+    justify-self: end;
+}
+
+.nav-open[aria-expanded="true"] + .primary-navigation {
+    translate: 0;
+    transition: translate 250ms ease-in;
+}
+
+nav.primary-navigation {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(121, 213, 234, 0.5);
+    translate: 100% 0;
+    transition: 250ms ease-in;
+}
+
+nav.primary-navigation .nav-close {
+    margin-inline-start: auto;
+    color: #37caeb;
+    transform: translateY(1rem);
+}
+
+nav.primary-navigation div.nav-menu {
+    background-color: #f2f0ea;
+    inset: 0 0 0 35%;
+    padding: 2rem 1rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+nav.primary-navigation div.nav-menu ul.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+nav.primary-navigation div.nav-menu a {
+    font-weight: 650;
+    color: #79d5ea;
+    padding: .5em 1em;
+}
+
+nav.primary-navigation div.nav-menu a:hover {
+    color: #0b5491;
+}
+
+nav.primary-navigation div.nav-menu a:focus-visible {
+    color: #0b5491;
+    outline: 2px solid #0b5491;
+}
+
+
+.hero .hero-content img {
+    margin-block-end: 2rem;
+}
+        
+.hero .hero-content h2 {
+    font-size: var(--fs-700);
+    font-weight: var(--fs-900);
+    margin-block-end: .5em;
+}
+
+.hero .hero-content p {
+    font-size: var(--fs-400);
+    max-width: 60ch;
+}
+
+.hero .hero-content-2 {
+    background-color: #F0F8FF;
+    color: #87CEFA;
+}
+
+.hero .hero-content-2 .our-software {
+    font-size: var(--fs-400);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.hero .hero-content-2 .our-software article{
+    margin-block: 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: #87CEFA;
+    color: #F0F8FF;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.hero .hero-content-2 .our-software article:hover {
+    translate: 0 -0.25rem;
+    transition: translate 125ms ease-in;
+}
+
+.hero .hero-form {
+    padding: 5rem 1rem .5rem 1rem;
+    background-image: url("Decodelabs Project Stock Photos/pexels-cottonbro-6804079.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .hero-form form {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: fit-content;
+    padding: 0 0 0.75rem 0;
+}
+
+.hero .hero-form form label {
+    font-size: var(--fs-400);
+}
+
+.hero .hero-form form input[type="email"] {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #f2f0ea;
+}
+
+.hero .hero-form form button {
+    width: fit-content;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.hero .hero-form form button:hover {
+    background-color: #87CEFA;
+    color: #F0F8FF;
+    transition: background-color 125ms ease-in, color 125ms ease-in;
+}
+
+
+.hero .contact-info {
+    background-color: #87CEFA;
+    font-weight: 650;
+
+    a {
+        color: #F0F8FF;
+    }
+
+    a:hover {
+        color: #0b5491;
+    }
+}
+
+
+footer {
+    font-size: smaller;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+
+@media (width > 48em) {
+    .primary-header button{
+        display: none;
+    }
+
+    .primary-header .primary-navigation {
+            position: initial;
+            grid-column: 3 / 4;
+            align-self: center;
+            translate: 0.0;
+            transition: none;
+    }
+
+    .primary-header .primary-navigation .nav-menu {
+        position: initial;
+        padding: 0;
+    }
+
+    .primary-header .primary-navigation .nav-menu .nav-list {
+        flex-direction: row;
+        justify-content: end;
+    }
+}
